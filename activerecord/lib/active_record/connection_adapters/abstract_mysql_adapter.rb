@@ -832,7 +832,7 @@ module ActiveRecord
 
       # MySQL is too stupid to create a temporary table for use subquery, so we have
       # to give it some prompting in the form of a subsubquery. Ugh!
-      def subquery_for(key, select)
+      def subquery_for(key, select) #:nodoc:
         subsubselect = select.clone
         subsubselect.projections = [key]
 
